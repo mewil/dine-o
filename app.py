@@ -9,13 +9,7 @@ TWILIO_ACCOUNT_SID = 'ACad66d36626749e01761ba8b7f811e80d'
 TWILIO_AUTH_TOKEN = 'eaddcc0f9ea6603d03d12509f4d4c6cd'
 TWILIO_BASE_PHONE_NUMBER= '+12485957598'
 
-
-# data required for a DB 
-#  - User
-#  - Twilio Phone Number
-#  - Restaurant
-db = {twilioPhoneNumber: (users, restaurants, replies)}
-
+db = {} # users_list, restaurants_list, numReplies
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 app = Flask(__name__)
@@ -27,7 +21,7 @@ def inbound_sms():
 		sendHelpMenu()
 	
 	elif ['To'] == TWILIO_BASE_PHONE_NUMBER:
-		parseMain(['Body'])
+		parseMain(['Body'], ['From'], db)
 
 
 	elif (['To'] in db.keys):
