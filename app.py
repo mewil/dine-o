@@ -1,8 +1,11 @@
 from flask import Flask, request
 from twilio import twiml
 from twilio.rest import TwilioRestClient
-from smsParser import *
-from dine import Dine
+
+from response import *
+
+from Item import Item
+from User import User
 
 #AUTHORIZATION KEYS
 TWILIO_ACCOUNT_SID = 'ACad66d36626749e01761ba8b7f811e80d' 

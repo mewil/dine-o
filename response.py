@@ -1,4 +1,5 @@
 # Response module that contains parsing functions
+
 from Item import Item
 from User import User
 
@@ -56,7 +57,7 @@ def parseMain(sms, fr, db):
 def parseResponse(sms):
 	#parse responses
 	items = sms.split(',')
-	#db.#add restaurant responses
+	db.#add restaurant responses
 	#send out decisions if necessary
 
 
