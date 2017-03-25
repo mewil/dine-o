@@ -16,5 +16,5 @@ class Item(object):
 	def addVotes(self, numVotes=1):
 		self.numVotes += numVotes
 
-	def getNumVotes(self):
+	def getVotes(self):
 		return self.numVotes

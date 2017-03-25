@@ -27,7 +27,7 @@ def inbound_sms():
 	elif request.form['To'] == TWILIO_BASE_PHONE_NUMBER:
 		parseMain(request.form['Body'], request.form['From'], db, client)
 
-	elif request.formrequest.form['To'] in db:
+	elif request.form['To'] in db:
 		parseResponse(request.form['Body'], request.form['To'], db, client)
 
 	else:

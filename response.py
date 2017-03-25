@@ -32,14 +32,19 @@ def parseMain(sms, fr, db, client):
 	for i in range(len(items)):
 		Items.append(Item(items[i]))
 
-	# SELECT TWILIO PHONE NUMBER
-	currentNumbers = client.phone_numbers.list()
-	for currentNumber in currentNumbers:
-		if currentNumber.phone_number not in db:
-			#set phone number and other data, then return
-			db[currentNumber.phone_number] = [Users, Items, 0]
-			sendReplies(Users, Items, currentNumber.phone_number, client, db)
-			return
+	print items
+
+	otherNumber = '+17343898724'
+	db[otherNumber] = [Users, Items, 0]
+	sendReplies(Users, Items, otherNumber, client, db)
+	return
+	
+	# # SELECT TWILIO PHONE NUMBER
+	# currentNumbers = client.phone_numbers.list()
+	# for currentNumber in currentNumbers:
+	# 	if currentNumber.phone_number not in db:
+	# 		#set phone number and other data, then return
+			
 
 	# # PURCHASE NEW TWILIO NUMBER IF THE TOO FEW TWILIO NUMBERS EXIST
 	# purchaseNumbers = client.phone_numbers.search(
@@ -60,7 +65,7 @@ def parseResponse(sms, to, db, client):
 
 	#add restaurant responses
 	for i in range(len(items)):
-		if item[i] in db[to][1]:
+		if items[i] in db[to][1]:
 			db[to][1][i].addVotes()
 
 	db[to][2] += 1
@@ -69,14 +74,14 @@ def parseResponse(sms, to, db, client):
 	if db[to][2] >= len(db[to][0]):
 		max = 0
 		maxItem = ''
-		for i in db[to][1]:
-			if db[to][1][i] >= max:
-				maxItem = db[to][1][i]
-				max = db[to][1][i]
-		for user in users:
+		for i in range(len(db[to][1])):
+			if db[to][1][i].getVotes() > max:
+				maxItem = db[to][1][i].getName()
+				max = db[to][1][i].getVotes()
+		for user in range(len(db[to][0])):
 			client.messages.create(
 		    	to= db[to][0][user].getPhoneNumber(),
-		    	from_= db[to],
+		    	from_= to,
 		    	body = 'Your group chose ' + maxItem
 		    )
 		del db[to]
@@ -91,8 +96,7 @@ def sendHelpMenu(client):
 def sendReplies(users, items, phoneNumber, client, db):
 	b = users[0].getName() + ' would like to Dine-o with you! Please reply with the items you would like from this list:\n'
 	for i in range(len(db[phoneNumber][1])):
-		b = b + str(i) + ' ' + str(db[phoneNumber][1][i])
-	print users
+		b = b + str(i + 1) + '. ' + str(db[phoneNumber][1][i].getName()) + '\n'
+
 	for i in range(len(users)):
-		print('Sending message')
 		client.messages.create(to= db[phoneNumber][0][i].getPhoneNumber(), from_= phoneNumber, body = b)
