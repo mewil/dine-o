@@ -1,7 +1,11 @@
 from user import User
 
 class Dine(object):
-# location is the area i.e. South U
+	
+	#			  South U, Packard, St St, Downtown
+	restaurants = [[],[],[],[]]
+
+	# location is the area i.e. South U
 	def __init__(self, location, phoneNumbers_friends, phoneNumber_primary, primaryName):
 		"""self.phoneNumbers = phoneNumbers # list of all the phone numbers of friends
 		self.phoneNumber_primary = phoneNumber_primary
