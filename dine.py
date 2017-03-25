@@ -3,7 +3,13 @@ from user import User
 class Dine(object):
 
 	#			  South U, Packard, St St, Downtown
-	restaurants = [[],[],['Amer\'s', 'Chipotle', 'Jimmy Johns', 'Noodles & Company', 'Piada', 'Potbelly'],['Frita Batidos','Pretzel Bell', 'Jolly Pumpkin', 'Mongolian BBQ', 'Grizzly Peak', 'Prickly Pear', 'Black Pearl', 'Shalimar']]
+
+	restaurants = [['No Thai', 'Panchero\'s', 'China Gate', 'Pizza House', 'Good Time Charlie\'s', 'Jimmy John\'s', 'BurgerFi', 'Sadako Japanese'],
+				  ['Dominick\'s', 'Cottage Inn', 'BTB Burrito', 'Happy\'s Pizza', 'Jimmy John\'s', 'Subway', 'Pizza Bob\'s', 'Grillcheezerie'],
+				  ['Amer\'s', 'Chipotle', 'Jimmy Johns', 'Noodles & Company', 'Piada', 'Potbelly'],
+				  ['Frita Batidos','Pretzel Bell', 'Jolly Pumpkin', 'Mongolian BBQ', 'Grizzly Peak', 'Prickly Pear', 'Black Pearl', 'Shalimar']]
+
+
 
 	# location is the area i.e. South U
 	def __init__(self, location, phoneNumbers_friends, phoneNumber_primary, primaryName):
