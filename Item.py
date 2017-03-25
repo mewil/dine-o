@@ -4,17 +4,17 @@ class Item(object):
 		self.name = name
 		self.numVotes = numVotes
 
-	def setName(name):
+	def setName(self, name):
 		self.name = name
 
-	def getName():
+	def getName(self):
 		return self.name
 
-	def setNumVotes(numVotes):
+	def setNumVotes(self, numVotes):
 		self.numVotes = numVotes
 
-	def addVotes(numVotes=1):
+	def addVotes(self, numVotes=1):
 		self.numVotes += numVotes
 
-	def getNumVotes():
+	def getNumVotes(self):
 		return self.numVotes
