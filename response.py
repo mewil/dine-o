@@ -1,3 +1,5 @@
+# Response module that contains parsing functions
+
 def parseMain(sms):
 	# parse responses
 	# [Name][Phone#1,Phone#2,...][FirstItem,SecondItem,...]
@@ -5,7 +7,6 @@ def parseMain(sms):
 	index_openB = 0
 	index_closeB = sms.find(']')
 	name = sms[index_openB+1:index_closeB]
-	print name
 	# find phoneNumbers
 	sms_phoneNumbers = sms[index_closeB+2:sms.find(']', index_closeB+1)]
 	phoneNumbers = sms_phoneNumbers.split(',')
@@ -14,12 +15,10 @@ def parseMain(sms):
 			phoneNumbers[i] = '+1' + phoneNumbers[i]
 		else:
 			phoneNumbers[i] = '+' + phoneNumbers[i]
-	print phoneNumbers
 	# find items
 	index_closeB = sms.find(']', index_closeB+len(sms_phoneNumbers))
 	sms_items = sms[index_closeB+2:sms.find(']', index_closeB+1)]
 	items = sms_items.split(',')
-	print items
 
 	currentNumbers = client.phone_numbers.list()
 	for currentNumber in currentNumbers:
@@ -48,6 +47,7 @@ def parseMain(sms):
 
 def parseResponse(sms):
 	#parse responses
+	items = sms.split(',')
 	#db.#add restaurant responses
 	#send out decisions if necessary
 
