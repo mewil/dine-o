@@ -1,9 +1,9 @@
 from user import User
 
 class Dine(object):
-	
+
 	#			  South U, Packard, St St, Downtown
-	restaurants = [[],[],[],[]]
+	restaurants = [[],[],['Amer\'s', 'Chipotle', 'Jimmy Johns', 'Noodles & Company', 'Piada', 'Potbelly'],['Frita Batidos','Pretzel Bell', 'Jolly Pumpkin', 'Mongolian BBQ', 'Grizzly Peak', 'Prickly Pear', 'Black Pearl', 'Shalimar']]
 
 	# location is the area i.e. South U
 	def __init__(self, location, phoneNumbers_friends, phoneNumber_primary, primaryName):
@@ -50,4 +50,4 @@ class Dine(object):
 		nameList = []
 		for person in users:
 			nameList.append(person.getName())
-		return nameList				
+		return nameList
