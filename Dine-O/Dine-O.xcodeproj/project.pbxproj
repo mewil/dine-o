@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C3F4BD81E8618DE0070C95B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F4BD71E8618DE0070C95B /* AppDelegate.swift */; };
+		4C3F4BDA1E8618DE0070C95B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F4BD91E8618DE0070C95B /* ViewController.swift */; };
+		4C3F4BDD1E8618DE0070C95B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F4BDB1E8618DE0070C95B /* Main.storyboard */; };
+		4C3F4BDF1E8618DE0070C95B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F4BDE1E8618DE0070C95B /* Assets.xcassets */; };
+		4C3F4BE21E8618DE0070C95B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F4BE01E8618DE0070C95B /* LaunchScreen.storyboard */; };
+		4C3F4BED1E8618DE0070C95B /* Dine_OTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F4BEC1E8618DE0070C95B /* Dine_OTests.swift */; };
+		4C3F4BF81E8618DE0070C95B /* Dine_OUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F4BF71E8618DE0070C95B /* Dine_OUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C3F4BE91E8618DE0070C95B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C3F4BCC1E8618DE0070C95B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C3F4BD31E8618DE0070C95B;
+			remoteInfo = "Dine-O";
+		};
+		4C3F4BF41E8618DE0070C95B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C3F4BCC1E8618DE0070C95B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C3F4BD31E8618DE0070C95B;
+			remoteInfo = "Dine-O";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C3F4BD41E8618DE0070C95B /* Dine-O.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dine-O.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3F4BD71E8618DE0070C95B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C3F4BD91E8618DE0070C95B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C3F4BDC1E8618DE0070C95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C3F4BDE1E8618DE0070C95B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C3F4BE11E8618DE0070C95B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C3F4BE31E8618DE0070C95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C3F4BE81E8618DE0070C95B /* Dine-OTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dine-OTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3F4BEC1E8618DE0070C95B /* Dine_OTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dine_OTests.swift; sourceTree = "<group>"; };
+		4C3F4BEE1E8618DE0070C95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C3F4BF31E8618DE0070C95B /* Dine-OUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dine-OUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3F4BF71E8618DE0070C95B /* Dine_OUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dine_OUITests.swift; sourceTree = "<group>"; };
+		4C3F4BF91E8618DE0070C95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C3F4BD11E8618DE0070C95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F4BE51E8618DE0070C95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F4BF01E8618DE0070C95B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C3F4BCB1E8618DE0070C95B = {
+			isa = PBXGroup;
+			children = (
+				4C3F4BD61E8618DE0070C95B /* Dine-O */,
+				4C3F4BEB1E8618DE0070C95B /* Dine-OTests */,
+				4C3F4BF61E8618DE0070C95B /* Dine-OUITests */,
+				4C3F4BD51E8618DE0070C95B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C3F4BD51E8618DE0070C95B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F4BD41E8618DE0070C95B /* Dine-O.app */,
+				4C3F4BE81E8618DE0070C95B /* Dine-OTests.xctest */,
+				4C3F4BF31E8618DE0070C95B /* Dine-OUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C3F4BD61E8618DE0070C95B /* Dine-O */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F4BD71E8618DE0070C95B /* AppDelegate.swift */,
+				4C3F4BD91E8618DE0070C95B /* ViewController.swift */,
+				4C3F4BDB1E8618DE0070C95B /* Main.storyboard */,
+				4C3F4BDE1E8618DE0070C95B /* Assets.xcassets */,
+				4C3F4BE01E8618DE0070C95B /* LaunchScreen.storyboard */,
+				4C3F4BE31E8618DE0070C95B /* Info.plist */,
+			);
+			path = "Dine-O";
+			sourceTree = "<group>";
+		};
+		4C3F4BEB1E8618DE0070C95B /* Dine-OTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F4BEC1E8618DE0070C95B /* Dine_OTests.swift */,
+				4C3F4BEE1E8618DE0070C95B /* Info.plist */,
+			);
+			path = "Dine-OTests";
+			sourceTree = "<group>";
+		};
+		4C3F4BF61E8618DE0070C95B /* Dine-OUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F4BF71E8618DE0070C95B /* Dine_OUITests.swift */,
+				4C3F4BF91E8618DE0070C95B /* Info.plist */,
+			);
+			path = "Dine-OUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C3F4BD31E8618DE0070C95B /* Dine-O */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3F4BFC1E8618DE0070C95B /* Build configuration list for PBXNativeTarget "Dine-O" */;
+			buildPhases = (
+				4C3F4BD01E8618DE0070C95B /* Sources */,
+				4C3F4BD11E8618DE0070C95B /* Frameworks */,
+				4C3F4BD21E8618DE0070C95B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dine-O";
+			productName = "Dine-O";
+			productReference = 4C3F4BD41E8618DE0070C95B /* Dine-O.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C3F4BE71E8618DE0070C95B /* Dine-OTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3F4BFF1E8618DE0070C95B /* Build configuration list for PBXNativeTarget "Dine-OTests" */;
+			buildPhases = (
+				4C3F4BE41E8618DE0070C95B /* Sources */,
+				4C3F4BE51E8618DE0070C95B /* Frameworks */,
+				4C3F4BE61E8618DE0070C95B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C3F4BEA1E8618DE0070C95B /* PBXTargetDependency */,
+			);
+			name = "Dine-OTests";
+			productName = "Dine-OTests";
+			productReference = 4C3F4BE81E8618DE0070C95B /* Dine-OTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C3F4BF21E8618DE0070C95B /* Dine-OUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3F4C021E8618DE0070C95B /* Build configuration list for PBXNativeTarget "Dine-OUITests" */;
+			buildPhases = (
+				4C3F4BEF1E8618DE0070C95B /* Sources */,
+				4C3F4BF01E8618DE0070C95B /* Frameworks */,
+				4C3F4BF11E8618DE0070C95B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C3F4BF51E8618DE0070C95B /* PBXTargetDependency */,
+			);
+			name = "Dine-OUITests";
+			productName = "Dine-OUITests";
+			productReference = 4C3F4BF31E8618DE0070C95B /* Dine-OUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C3F4BCC1E8618DE0070C95B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = OxLabs;
+				TargetAttributes = {
+					4C3F4BD31E8618DE0070C95B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N9FLZTVVNL;
+						ProvisioningStyle = Automatic;
+					};
+					4C3F4BE71E8618DE0070C95B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N9FLZTVVNL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4C3F4BD31E8618DE0070C95B;
+					};
+					4C3F4BF21E8618DE0070C95B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N9FLZTVVNL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4C3F4BD31E8618DE0070C95B;
+					};
+				};
+			};
+			buildConfigurationList = 4C3F4BCF1E8618DE0070C95B /* Build configuration list for PBXProject "Dine-O" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C3F4BCB1E8618DE0070C95B;
+			productRefGroup = 4C3F4BD51E8618DE0070C95B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C3F4BD31E8618DE0070C95B /* Dine-O */,
+				4C3F4BE71E8618DE0070C95B /* Dine-OTests */,
+				4C3F4BF21E8618DE0070C95B /* Dine-OUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C3F4BD21E8618DE0070C95B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F4BE21E8618DE0070C95B /* LaunchScreen.storyboard in Resources */,
+				4C3F4BDF1E8618DE0070C95B /* Assets.xcassets in Resources */,
+				4C3F4BDD1E8618DE0070C95B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F4BE61E8618DE0070C95B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F4BF11E8618DE0070C95B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C3F4BD01E8618DE0070C95B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F4BDA1E8618DE0070C95B /* ViewController.swift in Sources */,
+				4C3F4BD81E8618DE0070C95B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F4BE41E8618DE0070C95B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F4BED1E8618DE0070C95B /* Dine_OTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F4BEF1E8618DE0070C95B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F4BF81E8618DE0070C95B /* Dine_OUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C3F4BEA1E8618DE0070C95B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C3F4BD31E8618DE0070C95B /* Dine-O */;
+			targetProxy = 4C3F4BE91E8618DE0070C95B /* PBXContainerItemProxy */;
+		};
+		4C3F4BF51E8618DE0070C95B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C3F4BD31E8618DE0070C95B /* Dine-O */;
+			targetProxy = 4C3F4BF41E8618DE0070C95B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C3F4BDB1E8618DE0070C95B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C3F4BDC1E8618DE0070C95B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C3F4BE01E8618DE0070C95B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C3F4BE11E8618DE0070C95B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C3F4BFA1E8618DE0070C95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C3F4BFB1E8618DE0070C95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C3F4BFD1E8618DE0070C95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N9FLZTVVNL;
+				INFOPLIST_FILE = "Dine-O/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OxLabs.Dine-O";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4C3F4BFE1E8618DE0070C95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N9FLZTVVNL;
+				INFOPLIST_FILE = "Dine-O/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OxLabs.Dine-O";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4C3F4C001E8618DE0070C95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N9FLZTVVNL;
+				INFOPLIST_FILE = "Dine-OTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OxLabs.Dine-OTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dine-O.app/Dine-O";
+			};
+			name = Debug;
+		};
+		4C3F4C011E8618DE0070C95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N9FLZTVVNL;
+				INFOPLIST_FILE = "Dine-OTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OxLabs.Dine-OTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dine-O.app/Dine-O";
+			};
+			name = Release;
+		};
+		4C3F4C031E8618DE0070C95B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = N9FLZTVVNL;
+				INFOPLIST_FILE = "Dine-OUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OxLabs.Dine-OUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Dine-O";
+			};
+			name = Debug;
+		};
+		4C3F4C041E8618DE0070C95B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = N9FLZTVVNL;
+				INFOPLIST_FILE = "Dine-OUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.OxLabs.Dine-OUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Dine-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C3F4BCF1E8618DE0070C95B /* Build configuration list for PBXProject "Dine-O" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F4BFA1E8618DE0070C95B /* Debug */,
+				4C3F4BFB1E8618DE0070C95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C3F4BFC1E8618DE0070C95B /* Build configuration list for PBXNativeTarget "Dine-O" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F4BFD1E8618DE0070C95B /* Debug */,
+				4C3F4BFE1E8618DE0070C95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4C3F4BFF1E8618DE0070C95B /* Build configuration list for PBXNativeTarget "Dine-OTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F4C001E8618DE0070C95B /* Debug */,
+				4C3F4C011E8618DE0070C95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4C3F4C021E8618DE0070C95B /* Build configuration list for PBXNativeTarget "Dine-OUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F4C031E8618DE0070C95B /* Debug */,
+				4C3F4C041E8618DE0070C95B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C3F4BCC1E8618DE0070C95B /* Project object */;
+}
