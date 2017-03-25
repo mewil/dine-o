@@ -10,7 +10,11 @@ TWILIO_AUTH_TOKEN = 'eaddcc0f9ea6603d03d12509f4d4c6cd'
 TWILIO_BASE_PHONE_NUMBER= '+12485957598'
 
 
-db = {twilioPhoneNumber: [users, restaurants]}
+# data required for a DB 
+#  - User
+#  - Twilio Phone Number
+#  - Restaurant
+db = {twilioPhoneNumber: (users, restaurants, replies)}
 
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
