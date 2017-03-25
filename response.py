@@ -3,7 +3,7 @@
 from Item import Item
 from User import User
 
-def parseMain(sms, fr, db):
+def parseMain(sms, fr, db, client):
 	# PARSE RESPONSES
 	# [Name][Phone#1,Phone#2,...][FirstItem,SecondItem,...]
 	# find name
@@ -37,7 +37,7 @@ def parseMain(sms, fr, db):
 	for currentNumber in currentNumbers:
 		if currentNumber !in db.phoneNumbers:
 			#set phone number and other data, then returns
-			sendReplies(users, currentNumber)
+			sendReplies(users, Items, currentNumber, client)
 			db[currentNumber] = [Users, Items, 0]
 			return
 
@@ -49,29 +49,54 @@ def parseMain(sms, fr, db):
 	)
 	if purchaseNumbers:
 	    purchasedNumber = purchaseNumbers[0].purchase()
-		sendReplies(users, purchasedNumber)
+		sendReplies(users, Items, purchasedNumber, client)
 		db[purchasedNumber] = [Users, Items, 0]
 		#send out surveys
 
 
-def parseResponse(sms):
+def parseResponse(sms, to, db, client):
 	#parse responses
 	items = sms.split(',')
-	db.#add restaurant responses
+
+	#add restaurant responses
+	for i in range(len(items)):
+		if item[i] in db[to][1]:
+			db[to][1][i].addVotes()
+
+	db[to][2] += 1
+
 	#send out decisions if necessary
+	if db[to][2] >= len(db[to][0]):
+		max = 0
+		maxItem = ''
+		for i in db[to][1]:
+			if db[to][1][i] >= max:
+				maxItem = db[to][1][i]
+				max = db[to][1][i]
+		for user in users:
+			client.messages.create(
+		    	to= db[to][0][user]getPhoneNumber(),
+		    	from_= db[to],
+		    	body = 'Your group chose ' + maxItem
+		    )
+		del db[to]
 
-
-def sendHelpMenu():
+def sendHelpMenu(client):
 	client.messages.create(
 	    	to= ['From'],
 	    	from_= TWILIO_PHONE_NUMBER,
 	    	body = 'USAGE:\n /HELP\n /CURRENT\n /POST [Name][Phone#1,Phone#2,...][FirstItem, SecondItem,...]'
     )
 
-def sendReplies(users, phoneNumber):
-	for user in users;
+def sendReplies(users, items, phoneNumber, client):
+	for user in users:
 		client.messages.create(
-	    	to= user.phoneNumber,
+	    	to= db[to][0][user].getPhoneNumber(),
 	    	from_= phoneNumber,
-	    	body = 'USAGE:\n /HELP\n /CURRENT\n /POST [Name][Phone#1,Phone#2,...][FirstItem, SecondItem,...]'
+	    	body = user[0] + ' would like to dine with you! Please reply with the items you would like from this list:\n'
 	    )
+
+
+
+
+
