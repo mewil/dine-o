@@ -37,7 +37,7 @@ def parseMain(sms, fr, db, client):
 	for currentNumber in currentNumbers:
 		if currentNumber !in db.phoneNumbers:
 			#set phone number and other data, then returns
-			sendReplies(users, Items, currentNumber, client)
+			sendReplies(users, Items, currentNumber, client, db)
 			db[currentNumber] = [Users, Items, 0]
 			return
 
@@ -49,7 +49,7 @@ def parseMain(sms, fr, db, client):
 	)
 	if purchaseNumbers:
 	    purchasedNumber = purchaseNumbers[0].purchase()
-		sendReplies(users, Items, purchasedNumber, client)
+		sendReplies(users, Items, purchasedNumber, client, db)
 		db[purchasedNumber] = [Users, Items, 0]
 		#send out surveys
 
@@ -88,15 +88,10 @@ def sendHelpMenu(client):
 	    	body = 'USAGE:\n /HELP\n /CURRENT\n /POST [Name][Phone#1,Phone#2,...][FirstItem, SecondItem,...]'
     )
 
-def sendReplies(users, items, phoneNumber, client):
+def sendReplies(users, items, phoneNumber, client, db):
+	b = user[0] + ' would like to Dine-o with you! Please reply with'
+	    		+ ' the items you would like from this list:\n'
+	for i in range(len(db[to][1])):
+		b = b + str(i) + ' ' + db[to][1][i]
 	for user in users:
-		client.messages.create(
-	    	to= db[to][0][user].getPhoneNumber(),
-	    	from_= phoneNumber,
-	    	body = user[0] + ' would like to dine with you! Please reply with the items you would like from this list:\n'
-	    )
-
-
-
-
-
+		client.messages.create(to= db[to][0][user].getPhoneNumber(), from_= phoneNumber, body = b)
