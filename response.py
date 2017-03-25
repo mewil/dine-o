@@ -1,7 +1,9 @@
 # Response module that contains parsing functions
+from Item import Item
+from User import User
 
-def parseMain(sms):
-	# parse responses
+def parseMain(sms, fr, db):
+	# PARSE RESPONSES
 	# [Name][Phone#1,Phone#2,...][FirstItem,SecondItem,...]
 	# find name
 	index_openB = 0
@@ -20,29 +22,35 @@ def parseMain(sms):
 	sms_items = sms[index_closeB+2:sms.find(']', index_closeB+1)]
 	items = sms_items.split(',')
 
+	# DEFINE USERS LIST AND RESTAURANTS LIST
+	Users = []
+	Users.append(User(fr, name))
+	for i in range(len(phoneNumbers)):
+		Users.append(User(phoneNumbers[i]))
+	Items = []
+	for i in range(len(items)):
+		Items.append(Item(items[i]))
+
+	# SELECT TWILIO PHONE NUMBER
 	currentNumbers = client.phone_numbers.list()
 	for currentNumber in currentNumbers:
 		if currentNumber !in db.phoneNumbers:
 			#set phone number and other data, then returns
 			sendReplies(users, currentNumber)
+			db[currentNumber] = [Users, Items, 0]
 			return
 
-	#otherwise purchases a new number and sets it and other data
+	# PURCHASE NEW TWILIO NUMBER IF THE TOO FEW TWILIO NUMBERS EXIST
 	purchaseNumbers = client.phone_numbers.search(
 	    area_code="734",
 	    country="US",
 	    type="local"
 	)
-
 	if purchaseNumbers:
 	    purchasedNumber = purchaseNumbers[0].purchase()
 		sendReplies(users, purchasedNumber)
-		db.#add users
+		db[purchasedNumber] = [Users, Items, 0]
 		#send out surveys
-
-	return
-
-
 
 
 def parseResponse(sms):
@@ -66,6 +74,3 @@ def sendReplies(users, phoneNumber):
 	    	from_= phoneNumber,
 	    	body = 'USAGE:\n /HELP\n /CURRENT\n /POST [Name][Phone#1,Phone#2,...][FirstItem, SecondItem,...]'
 	    )
-
-
-
