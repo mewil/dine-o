@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route('/sms', methods=['POST'])
 def inbound_sms():
-	if ['Body'] == '/help' || ['Body'] == '/Help' || ['Body'] == '/HELP':
+	if ['Body'] == '/help' or ['Body'] == '/Help' or ['Body'] == '/HELP':
 		sendHelpMenu(client)
 	
 	elif ['To'] == TWILIO_BASE_PHONE_NUMBER:
