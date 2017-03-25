@@ -8,11 +8,11 @@ from Item import Item
 from User import User
 
 #AUTHORIZATION KEYS
-TWILIO_ACCOUNT_SID = 'ACad66d36626749e01761ba8b7f811e80d' 
-TWILIO_AUTH_TOKEN = 'eaddcc0f9ea6603d03d12509f4d4c6cd'
+ACCOUNT_SID = 'ACad66d36626749e01761ba8b7f811e80d' 
+AUTH_TOKEN = 'eaddcc0f9ea6603d03d12509f4d4c6cd'
 TWILIO_BASE_PHONE_NUMBER = '+12485957598'
 
-db = {} # users_list, restaurants_list, numReplies
+db = {} # users_list, item_list, numReplies
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 app = Flask(__name__)
@@ -20,17 +20,20 @@ app = Flask(__name__)
 
 @app.route('/sms', methods=['POST'])
 def inbound_sms():
-	if ['Body'] == '/help' || ['Body'] == '/Help' || ['Body'] == '/HELP':
+	print("Message received")
+	if request.form['Body'].lower() == 'help':
 		sendHelpMenu(client)
 	
-	elif ['To'] == TWILIO_BASE_PHONE_NUMBER:
-		parseMain(['Body'], ['From'], db, client)
+	elif request.form['To'] == TWILIO_BASE_PHONE_NUMBER:
+		parseMain(request.form['Body'], request.form['From'], db, client)
 
-	elif ['To'] in db:
-		parseResponse(['Body'], ['To'], db, client)
+	elif request.formrequest.form['To'] in db:
+		parseResponse(request.form['Body'], request.form['To'], db, client)
 
 	else:
 		sendHelpMenu(client)
+
+	return 'SUCCESS'
 
 
 

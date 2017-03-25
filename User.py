@@ -4,14 +4,14 @@ class User(object):
 		self.phoneNumber = phoneNumber
 		self.name = name
 
-	def setPhoneNumber(phoneNumber):
+	def setPhoneNumber(self, phoneNumber):
 		self.phoneNumber = phoneNumber
 
-	def getPhoneNumber():
+	def getPhoneNumber(self):
 		return self.phoneNumber
 
-	def setName(name):
+	def setName(self, name):
 		self.name = name
 
-	def getName():
+	def getName(self):
 		return self.name

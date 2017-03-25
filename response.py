@@ -35,23 +35,23 @@ def parseMain(sms, fr, db, client):
 	# SELECT TWILIO PHONE NUMBER
 	currentNumbers = client.phone_numbers.list()
 	for currentNumber in currentNumbers:
-		if currentNumber !in db.phoneNumbers:
-			#set phone number and other data, then returns
-			sendReplies(users, Items, currentNumber, client, db)
-			db[currentNumber] = [Users, Items, 0]
+		if currentNumber.phone_number not in db:
+			#set phone number and other data, then return
+			db[currentNumber.phone_number] = [Users, Items, 0]
+			sendReplies(Users, Items, currentNumber.phone_number, client, db)
 			return
 
-	# PURCHASE NEW TWILIO NUMBER IF THE TOO FEW TWILIO NUMBERS EXIST
-	purchaseNumbers = client.phone_numbers.search(
-	    area_code="734",
-	    country="US",
-	    type="local"
-	)
-	if purchaseNumbers:
-	    purchasedNumber = purchaseNumbers[0].purchase()
-		sendReplies(users, Items, purchasedNumber, client, db)
-		db[purchasedNumber] = [Users, Items, 0]
-		#send out surveys
+	# # PURCHASE NEW TWILIO NUMBER IF THE TOO FEW TWILIO NUMBERS EXIST
+	# purchaseNumbers = client.phone_numbers.search(
+	#     area_code="734",
+	#     country="US",
+	#     type="local"
+	# )
+	# if purchaseNumbers:
+	# 	purchasedNumber = purchaseNumbers[0].purchase()
+	# 	sendReplies(Users, Items, purchasedNumber, client, db)
+	# 	db[purchasedNumber] = [Users, Items, 0]
+	# 	#send out surveys
 
 
 def parseResponse(sms, to, db, client):
@@ -75,7 +75,7 @@ def parseResponse(sms, to, db, client):
 				max = db[to][1][i]
 		for user in users:
 			client.messages.create(
-		    	to= db[to][0][user]getPhoneNumber(),
+		    	to= db[to][0][user].getPhoneNumber(),
 		    	from_= db[to],
 		    	body = 'Your group chose ' + maxItem
 		    )
@@ -85,13 +85,14 @@ def sendHelpMenu(client):
 	client.messages.create(
 	    	to= ['From'],
 	    	from_= TWILIO_PHONE_NUMBER,
-	    	body = 'USAGE:\n /HELP\n /CURRENT\n /POST [Name][Phone#1,Phone#2,...][FirstItem, SecondItem,...]'
+	    	body = 'USAGE:\n HELP\n CURRENT\n POST [Name][Phone#1,Phone#2,...][FirstItem, SecondItem,...]'
     )
 
 def sendReplies(users, items, phoneNumber, client, db):
-	b = user[0] + ' would like to Dine-o with you! Please reply with'
-	    		+ ' the items you would like from this list:\n'
-	for i in range(len(db[to][1])):
-		b = b + str(i) + ' ' + db[to][1][i]
-	for user in users:
-		client.messages.create(to= db[to][0][user].getPhoneNumber(), from_= phoneNumber, body = b)
+	b = users[0].getName() + ' would like to Dine-o with you! Please reply with the items you would like from this list:\n'
+	for i in range(len(db[phoneNumber][1])):
+		b = b + str(i) + ' ' + str(db[phoneNumber][1][i])
+	print users
+	for i in range(len(users)):
+		print('Sending message')
+		client.messages.create(to= db[phoneNumber][0][i].getPhoneNumber(), from_= phoneNumber, body = b)
