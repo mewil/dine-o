@@ -8,9 +8,9 @@ from Item import Item
 from User import User
 
 #AUTHORIZATION KEYS
-ACCOUNT_SID = 'ACad66d36626749e01761ba8b7f811e80d' 
-AUTH_TOKEN = 'eaddcc0f9ea6603d03d12509f4d4c6cd'
-TWILIO_BASE_PHONE_NUMBER = '+12485957598'
+ACCOUNT_SID = '' 
+AUTH_TOKEN = ''
+TWILIO_BASE_PHONE_NUMBER = ''
 
 db = {} # users_list, item_list, numReplies
 
